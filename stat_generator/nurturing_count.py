@@ -45,4 +45,7 @@ def count(trial_path):
     return cum_nurturing, num_trials
 
 if __name__ == '__main__':
-    print count('/Users/AliHM/Documents/workspace/nevil/sibling-analytics/results/case_1')
+    if len(sys.argv) != 2:
+      print sys.argv[0], '[path]'
+      sys.exit(1)
+    print count(sys.argv[1])
